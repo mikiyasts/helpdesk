@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Support Ticket Request</title>
+</head>
+<body style="background-color: #111827; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; width: 100%; min-width: 450px; padding: 20px; margin: 0;">
+    <div style="background-color: #1f2937; color: white; padding: 1rem; border-radius: 12px; width: 100%; max-width: 600px; margin: 2rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+        <div style="display: flex; justify-content: center; border-bottom: 1px solid #939ba7; padding-bottom: 1rem; margin-bottom: 1rem;">
+            <h1 style="font-size: 24px; color: #fff;">New Support Ticket Request</h1>
+        </div>
+        <div style="color: white;">
+            <p style="font-size: 16px; line-height: 1.5; margin-bottom: 1rem;">You have received a new support ticket request from <strong>{{ user.first_name }} {{ user.last_name }}</strong>.</p>
+            <p style="font-size: 16px; line-height: 1.5; margin-bottom: 1rem;"><strong>Ticket Request Details:</strong></p>
+            <ul style="color: white; padding-left: 20px;">
+                <li style="margin-bottom: 8px;"><strong>User:</strong> {{ user.first_name }} {{ user.last_name }}</li>
+                <li style="margin-bottom: 8px;"><strong>Email:</strong> {{ user.email }}</li>
+                <li style="margin-bottom: 8px;"><strong>Request Description:</strong> {{ ticket_description }}</li>
+                <li style="margin-bottom: 8px;"><strong>Requested On:</strong> {{ ticket_created_at }}</li>
+                <li style="margin-bottom: 8px;"><strong>Ticket Priority:</strong> {{ ticket_priority  }}</li>
+            </ul>
+            <p style="font-size: 16px; line-height: 1.5; margin-bottom: 1rem;">Please review the details above and take the necessary actions as soon as possible.</p>
+            <p style="font-size: 16px; line-height: 1.5; margin-bottom: 1rem;">For more information, log in to the IT HelpDesk System: <a href="{{ticketurl}}" style="display: inline-block; text-decoration: none; background-color: #8470ff; color: white; padding: 10px 25px; font-weight: bold; border-radius: 15px; text-align: center; margin-top: 1rem;">IT HelpDesk</a></p>
+        </div>
+        <div style="font-size: 14px; color: #bbb; text-align: center; margin-top: 2rem;">
+            <p style="margin: 0;">Best regards,<br>Awash Wine S.C Helpdesk</p>
+        </div>
+    </div>
+</body>
+</html>
