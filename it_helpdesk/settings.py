@@ -120,14 +120,24 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
 }
 
-
-
+#postgres
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'awashwinesinfo_helpdesk',        # Replace with your database name
+        'USER': 'awashwinesinfo_helpdesk_user',        # Replace with your database user
+        'PASSWORD': '8b2tUHeqsyFNZAJ', # Replace with your database password
+        'HOST': '91.204.209.13',                  # cPanel uses localhost for databases
+        'PORT': '5432',                       # Default PostgreSQL port
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # DATABASES = {
